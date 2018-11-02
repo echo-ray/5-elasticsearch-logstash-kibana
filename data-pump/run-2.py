@@ -19,7 +19,7 @@ connection = pika.BlockingConnection(connection_parameters)
 channel = connection.channel()
 
 channel.exchange_declare(exchange = exchange_name, 
-                         type = "fanout")
+                         exchange_type = "fanout")
 
 ## 读取数据并发布到RabbitMQ中
 
